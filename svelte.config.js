@@ -6,5 +6,3 @@ export default {
 		adapter: adapter()
 	}
 };
-
-export default config;
