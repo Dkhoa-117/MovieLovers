@@ -1,5 +1,7 @@
 # MovieLovers
 
+Deploy in Heroku: [Movie Lovers](https://dkhoa-movie-lovers.herokuapp.com)
+
 ## Description
 
 A little movie app with SvelteKit.
