@@ -2,6 +2,8 @@
 
 Deploy in Heroku: [Movie Lovers](https://dkhoa-movie-lovers.herokuapp.com)
 
+For Android users: [Source code + file APK](https://github.com/Dkhoa-117/MovieLovers/tree/main/movie_app/Android)
+
 ## Description
 
 A little movie app with SvelteKit.
