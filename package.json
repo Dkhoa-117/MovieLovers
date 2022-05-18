@@ -2,9 +2,9 @@
   "name": "movie-app",
   "version": "0.0.1",
   "scripts": {
+    "start": "node build/index.js",
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "start": "node build/index.js",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
@@ -15,7 +15,9 @@
   "devDependencies": {
     "@playwright/test": "^1.19.1",
     "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-node": "^1.0.0-next.73",
     "@sveltejs/kit": "next",
+    "@tsconfig/svelte": "^3.0.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
@@ -25,6 +27,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@sveltejs/adapter-node": "^1.0.0-next.71"
+    "svelte-youtube-embed": "^0.1.0"
   }
 }

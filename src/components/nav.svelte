@@ -10,7 +10,7 @@
 		justify-content: center;
 	}
 	a {
-		font-size: 1rem;
+		font-size: 4rem;
 		font-weight: bold;
 		font-family: 'Poppins';
 		color: black;

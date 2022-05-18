@@ -1,40 +1,22 @@
-# create-svelte
+# Deploy app on Heroku
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+- create a project and clone an empty heroku git project.
+- install package with this command.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
+```
+npm i -D @sveltejs/adapter-node@next
 ```
 
-> Note: the `@next` is temporary
+- add api key into Config Vars setting on heroku.
+- add start script into package.json file.
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```
+"start": "node build/index.js",
 ```
 
-## Building
+- add Buildpacks (heroku/nodejs) on Heroku setting.
+- Check your application, if it's an error then check Heroku logs with this command.
 
-To create a production version of your app:
-
-```bash
-npm run build
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+heroku logs
+```
