@@ -2,7 +2,7 @@
 	let trailer;
 	export async function load({ fetch, params }) {
 		const res2 = await fetch(
-			`https://api.themoviedb.org/3/movie/${params.id}/videos?api_key=${
+			`https://api.themoviedb.org/3/tv/${params.id}/videos?api_key=${
 				import.meta.env.VITE_API
 			}&language=en-US`
 		);
@@ -10,17 +10,16 @@
 		if (res2.ok) {
 			trailer = videos.results.find((element) => element.type === 'Trailer');
 		}
-
 		const res = await fetch(
-			`https://api.themoviedb.org/3/movie/${params.id}?api_key=${
+			`https://api.themoviedb.org/3/tv/${params.id}?api_key=${
 				import.meta.env.VITE_API
 			}&language=en-US`
 		);
-		const movieDetail = await res.json();
+		const tvDetail = await res.json();
 		if (res.ok) {
 			return {
 				props: {
-					movieDetail
+					tvDetail
 				}
 			};
 		}
@@ -29,8 +28,7 @@
 
 <script>
 	import { fly } from 'svelte/transition';
-	export let movieDetail;
-	console.log(movieDetail);
+	export let tvDetail;
 	import Youtube from 'svelte-youtube-embed';
 </script>
 
@@ -40,22 +38,20 @@
 	out:fly={{ duration: 400 }}
 >
 	<div class="img-container">
-		<img
-			src={'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path}
-			alt={movieDetail.title}
-		/>
+		<img src={'https://image.tmdb.org/t/p/original' + tvDetail.backdrop_path} alt={tvDetail.name} />
 	</div>
 	<div class="txt-container">
-		<h1>{movieDetail.title}</h1>
-		<p class="overview">{movieDetail.overview}</p>
+		<h1>{tvDetail.name}</h1>
+		<p class="overview">{tvDetail.overview}</p>
 		<p>
 			<span>Release Date:</span>
-			{movieDetail.release_date} <br />
-			<span>Budget:</span> ${movieDetail.budget} <br />
+			{tvDetail.first_air_date} <br />
+			<span>Language:</span>
+			{tvDetail.original_language.toUpperCase()}<br />
 			<span>Rating:</span>
-			{movieDetail.vote_average} <br />
-			<span>Runtime:</span>
-			{movieDetail.runtime} mins
+			{tvDetail.vote_average} <br />
+			<span>Popularity:</span>
+			{tvDetail.popularity} views
 		</p>
 	</div>
 	<h2>Official Trailer</h2>

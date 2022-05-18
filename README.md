@@ -18,17 +18,28 @@ _Picture 1: Home Page_
 
 _Picture 2: Movie Detail_
 
+## Adding some new stuff for this project.
+
+This project has many things that I want to improve, but for now, because of the lack of time and knowledge, these are some things that I can do:
+
+- [Embed Youtube video using this library](https://www.npmjs.com/package/svelte-youtube-embed)
+- Adding Series.
+- Adding Navigation bar.
+
 ## How to run this project
 
 ### Add API from TMDB
+
 [Get API Key](https://www.themoviedb.org/settings/api)
 
 ### Install what the project need
+
 ```
 npm install
 ```
 
 ### Run the project
+
 ```
 npm run dev
 ```
