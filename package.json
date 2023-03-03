@@ -1,0 +1,28 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "this is a template",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dkhoa-117/_template_NodeJS.git"
+  },
+  "author": "vudangkhoa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dkhoa-117/_template_NodeJS/issues"
+  },
+  "homepage": "https://github.com/Dkhoa-117/_template_NodeJS#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-status-codes": "^2.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.21"
+  }
+}
