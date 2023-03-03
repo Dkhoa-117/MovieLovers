@@ -1,22 +1,22 @@
 {
-  "name": "template",
+  "name": "movielovers",
   "version": "1.0.0",
   "type": "module",
-  "description": "this is a template",
+  "description": "api self-make for movielovers ",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dkhoa-117/_template_NodeJS.git"
+    "url": "git+https://github.com/Dkhoa-117/MovieLovers.git"
   },
   "author": "vudangkhoa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dkhoa-117/_template_NodeJS/issues"
+    "url": "https://github.com/Dkhoa-117/MovieLovers/issues"
   },
-  "homepage": "https://github.com/Dkhoa-117/_template_NodeJS#readme",
+  "homepage": "https://github.com/Dkhoa-117/MovieLovers#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
